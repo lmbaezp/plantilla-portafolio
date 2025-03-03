@@ -12,29 +12,42 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Chakra Petch",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Chakra Petch", sans-serif;
+  --nav-font: "Poppins", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #4e4e4e; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #0a090f; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #14E956; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+:root {
+  --background-color: #ffffff;
+  /* Background color for the entire website, including individual sections */
+  --default-color: #4e4e4e;
+  /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #0a090f;
+  /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #14E956;
+  --accent-color-transp: rgb(20, 233, 86, 0.5);
+  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff;
+  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff;
+  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #ffffff;  /* The default color of the main navmenu links */
-  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #0078ff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #ffffff;
+  /* The default color of the main navmenu links */
+  --nav-hover-color: #ffffff;
+  /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff;
+  /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff;
+  /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #212529;
+  /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #0078ff;
+  /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -53,16 +66,17 @@
 }
 
 .accent-background {
-  --background-color: rgb(20, 233, 86, .7);
+  --background-color: #14e956b3;
   --default-color: #ffffff;
   --heading-color: #ffffff;
+  --dark-heading-color: #000;
   --accent-color: #ffffff;
   --surface-color: #3393ff;
   --contrast-color: #ffffff;
 }
 
 .gradient-background {
-  --background-color: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0.6), rgba(20,233,86,0.5));
+  --background-color: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6), rgba(20, 233, 86, 0.502));
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --accent-color: #ffffff;
@@ -457,8 +471,8 @@ h6 {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: #060606;
+  background-color: rgb(20, 233, 86, .7);
   font-size: 14px;
   padding: 40px 0;
   position: relative;
@@ -479,16 +493,17 @@ h6 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 30%);
+  border: 1px solid color-mix(in srgb, #060606, transparent 20%);
   font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, #060606, transparent 20%);
   margin: 0 5px;
   transition: 0.3s;
 }
 
 .footer .social-links a:hover {
-  color: var(--default-color);
-  border-color: var(--default-color);
+  color: #fff;
+  background-color: color-mix(in srgb, #060606, transparent 20%);
+  border: 0px; 
 }
 
 .footer .credits {
@@ -498,7 +513,7 @@ h6 {
 }
 
 .footer .credits a {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, #060606, transparent 20%);
 }
 
 /*--------------------------------------------------------------
@@ -568,6 +583,11 @@ h6 {
   visibility: visible;
   opacity: 1;
   bottom: 15px;
+}
+
+.scroll-top.btnFooter {
+  background-color: color-mix(in srgb, #060606, transparent 20%);
+  color: rgb(20, 233, 86, .7);
 }
 
 /*--------------------------------------------------------------
@@ -811,6 +831,14 @@ section,
   font-size: 18px;
 }
 
+.about .about-me-link {
+  text-decoration: underline;
+  color: var(--heading-color);
+}
+
+.about .about-me-link:hover {
+  background-color: var(--accent-color-transp);
+}
 /*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
@@ -819,12 +847,13 @@ section,
   font-size: 26px;
   font-weight: 700;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .resume .resume-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
+  margin-bottom: 10px;
   border-left: 2px solid var(--accent-color);
   position: relative;
 }
@@ -873,29 +902,72 @@ section,
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
-.services .service-item {
-  background-color: var(--surface-color);
-  box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1);
-  padding: 60px 30px;
-  transition: all ease-in-out 0.3s;
-  border-radius: 18px;
-  border-bottom: 5px solid var(--surface-color);
-  height: 100%;
+.services {
+margin-left: 4vw;
+margin-right: 4vw;
 }
 
-.services .service-item .icon {
+.service-item-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
   color: var(--contrast-color);
   background: var(--accent-color);
-  margin: 0;
-  width: 64px;
-  height: 64px;
   border-radius: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  width: 40px;
+  height: 40px;
   font-size: 28px;
   transition: ease-in-out 0.3s;
+}
+
+.other-service-item {
+  margin: 0 0 20px 0;
+  padding: 0 0 2px 0; 
+  cursor: pointer;
+}
+
+.other-service-item:hover {
+  border-bottom: 2px solid #14e956;
+  transform: scale(1.05);
+  transition: ease-in-out 0.3s;
+}
+
+.other-service-item.active {
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.6);
+  border-bottom: 2px solid #14e956;
+}
+
+.other-service-item-text.active {
+  display: block;
+  font-size: larger;
+}
+
+.other-service-item-text.no-active {
+  display: none;
+}
+
+@media (max-width: 984px) {
+  .other-service-item .item-name h5 {
+    font-size: 14px;
+    margin: 0 5px;
+  }
+}
+
+@media (max-width: 630px) {
+  .other-service-item .item-name h5 {
+    font-size: 12px;
+    margin: 0 2px;
+  }
+
+  .other-service-item-text li {
+    font-size: 14px;
+  }
 }
 
 .services .service-item h3 {
@@ -911,14 +983,20 @@ section,
   margin-bottom: 0;
 }
 
-@media (min-width: 1365px) {
-  .services .service-item:hover {
-    transform: translateY(-10px);
-    border-color: var(--accent-color);
-  }
+.services .service-item:hover {
+  transform: translateY(-10px);
+  border-color: var(--accent-color);
+  box-shadow: 0px 10px 90px 0px var(--accent-color-transp);
+}
 
-  .services .service-item:hover h3 {
-    color: var(--accent-color);
+.services .service-item:hover h3 {
+  color: var(--accent-color);
+}
+
+@media (max-width: 575px) {
+  .portfolio .portfolio-filters li {
+    font-size: 14px;
+    margin: 0 5px;
   }
 }
 
@@ -927,7 +1005,7 @@ section,
 --------------------------------------------------------------*/
 .stats {
   position: relative;
-  padding: 120px 0;
+  padding: 100px 0;
 }
 
 .stats img {
@@ -942,7 +1020,7 @@ section,
 
 .stats:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 40%);
+  background: color-mix(in srgb, var(--background-color), transparent 0%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -953,30 +1031,18 @@ section,
   z-index: 3;
 }
 
-.stats .stats-item {
-  padding: 30px;
-  width: 100%;
-}
-
-.stats .stats-item span {
-  font-size: 48px;
-  display: block;
-  color: var(--default-color);
-  font-weight: 700;
-}
-
-.stats .stats-item p {
-  padding: 0;
-  margin: 0;
-  font-family: var(--heading-font);
-  font-size: 16px;
-  font-weight: 700;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-}
-
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
+.img-mini {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.img-mini:hover {
+  box-shadow: 2px 2px 2px 2px #14e956;
+}
+
 .portfolio .portfolio-filters {
   padding: 0;
   margin: 0 auto 20px auto;
@@ -1050,6 +1116,7 @@ section,
 .portfolio .portfolio-item .portfolio-info .details-link {
   position: absolute;
   right: 50px;
+  margin-left: 10px;
   font-size: 24px;
   top: calc(50% - 14px);
   color: color-mix(in srgb, var(--default-color), transparent 30%);
@@ -1070,28 +1137,6 @@ section,
 .portfolio .portfolio-item:hover .portfolio-info {
   opacity: 1;
   bottom: 20px;
-}
-
-/*--------------------------------------------------------------
-# Pricing Section
---------------------------------------------------------------*/
-.pricing .pricing-item {
-  border-bottom: 1px dashed color-mix(in srgb, var(--default-color), transparent 60%);
-  width: 100%;
-  height: 100%;
-  padding: 0 0 15px 0;
-}
-
-.pricing .pricing-item h3 {
-  margin: 0;
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.pricing .pricing-item h4 {
-  margin: 0;
-  font-size: 18px;
-  color: var(--accent-color);
 }
 
 /*--------------------------------------------------------------
@@ -1193,7 +1238,7 @@ section,
 
 .testimonials:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
+  background: color-mix(in srgb, var(--background-color), transparent 0%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -1231,15 +1276,16 @@ section,
 }
 
 .testimonials .testimonial-item h3 {
+  color: var(--dark-heading-color);
   font-size: 20px;
   font-weight: bold;
   margin: 10px 0 5px 0;
 }
 
 .testimonials .testimonial-item h4 {
-  font-size: 14px;
+  font-size: 20px;
   margin: 0 0 15px 0;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, var(--dark-heading-color), transparent 40%);
 }
 
 .testimonials .testimonial-item .stars {
@@ -1253,7 +1299,7 @@ section,
 
 .testimonials .testimonial-item .quote-icon-left,
 .testimonials .testimonial-item .quote-icon-right {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, var(--dark-heading-color), transparent 50%);
   font-size: 26px;
   line-height: 0;
 }
@@ -1274,7 +1320,9 @@ section,
 
 .testimonials .testimonial-item p {
   font-style: italic;
+  font-size: 3vh;
   margin: 0 auto 15px auto;
+  color: color-mix(in srgb, var(--dark-heading-color), transparent 40%);
 }
 
 .testimonials .swiper-wrapper {
@@ -1382,8 +1430,9 @@ section,
 }
 
 .contact .php-email-form button[type=submit] {
-  color: var(--contrast-color);
+  color: #060606;
   background: var(--accent-color);
+  font-weight: bolder;
   border: 0;
   padding: 10px 30px;
   transition: 0.4s;
@@ -1392,6 +1441,8 @@ section,
 
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  transform: scale(1.05);
+  transition: ease-in-out 0.3s;
 }
 
 /*--------------------------------------------------------------
